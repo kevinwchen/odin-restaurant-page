@@ -1,30 +1,144 @@
+@font-face {
+    font-family: ChineseDragon;
+    src: url(assets/fonts/ChineseDragon.ttf);
+}
+
 * {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
+    color: white;
+    box-sizing: border-box;
 }
 
 body {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("./assets/home.webp") no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  display: grid;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("./assets/images/home.webp") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display: grid;
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+}
+
+#content {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
 }
 
 #navbar {
-  display: grid;
-  grid-auto-flow: column;
-  font-size: 1.5em;
-  justify-content: center;
-  width: minmax(100px);
-  gap: 2em;
-  padding-top: 2em;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+li {
+    list-style-type: none;
+}
+
+.navButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    box-sizing: border-box;
+    height: 2em;
+    width: 10em;
+    font-size: 1em;
+}
+
+.navButton:hover {
+    border-style: solid inset;
+    border-width: 1px 0;
+    box-sizing: border-box;
 }
 
 #footer {
-  display: grid;
-  justify-content: center;
+    display: grid;
+    justify-content: center;
+    padding: 2em;
+    font-size: 1em;
+}
+
+#main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-style: solid;
+    border-width: 4px 0;
+    border-color: white;
+}
+#home,
+#menu,
+#about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 2em;
+}
+
+#homeHead {
+    font-size: 8em;
+    font-family: ChineseDragon, system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+        "Helvetica Neue", sans-serif;
+}
+
+#homeSubHead {
+    font-size: 1.5em;
+}
+
+#menu {
+    justify-content: start;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#menu-head,
+#about-head {
+    font-family: ChineseDragon, system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+        "Helvetica Neue", sans-serif;
+    font-size: 4em;
+}
+
+#menu-item-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.menu-item-title {
+    display: flex;
+    font-size: 2em;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-item-price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#about {
+    justify-content: start;
+    background-color: rgba(0, 0, 0, 0.5);
 }
